@@ -8,12 +8,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('fecha_de_nacimiento') }}
-            {{ Form::text('fecha_de_nacimiento', $paciente->fecha_de_nacimiento, ['class' => 'form-control' . ($errors->has('fecha_de_nacimiento') ? ' is-invalid' : ''), 'placeholder' => 'fecha_de_nacimiento']) }}
+            {{ Form::date('fecha_de_nacimiento', $paciente->fecha_de_nacimiento, ['class' => 'form-control' . ($errors->has('fecha_de_nacimiento') ? ' is-invalid' : ''), 'placeholder' => 'fecha_de_nacimiento']) }}
             {!! $errors->first('fecha_de_nacimiento', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('genero') }}
-            {{ Form::text('genero', $paciente->genero, ['class' => 'form-control' . ($errors->has('genero') ? ' is-invalid' : ''), 'placeholder' => 'genero']) }}
+            {{ Form::select('genero', ['macho' => 'Macho', 'hembra' => 'Hembra'], $paciente->genero, ['class' => 'form-control' . ($errors->has('genero') ? ' is-invalid' : ''), 'placeholder' => 'genero']) }}
             {!! $errors->first('genero', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

@@ -64,7 +64,7 @@
 
                                             <td>
                                                 <form action="{{ route('pacientes.destroy',$paciente->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('pacientes.show',$paciente->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Detalles') }}</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('pacientes.show',$paciente->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mirar') }}</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('pacientes.edit',$paciente->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')

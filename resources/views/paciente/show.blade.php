@@ -14,7 +14,7 @@
                             <span class="card-title">{{ __('Show') }} Paciente</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('pacientes.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary" href="{{ route('pacientes.index') }}"> {{ __('Atras') }}</a>
                         </div>
                     </div>
 
@@ -23,6 +23,14 @@
                         <div class="form-group">
                             <strong>Mascota:</strong>
                             {{ $paciente->mascota }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Fecha de nacimiento:</strong>
+                            {{ $paciente->fecha_de_nacimiento }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Genero:</strong>
+                            {{ $paciente->genero }}
                         </div>
                         <div class="form-group">
                             <strong>Alergias:</strong>
@@ -39,6 +47,10 @@
                         <div class="form-group">
                             <strong>Telefono:</strong>
                             {{ $paciente->telefono }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Correo:</strong>
+                            {{ $paciente->correo }}
                         </div>
 
                     </div>
