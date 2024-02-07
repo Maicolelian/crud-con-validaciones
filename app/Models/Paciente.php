@@ -37,7 +37,7 @@ class Paciente extends Model
      *
      * @var array
      */
-    protected $fillable = ['mascota','alergias','edad','propietario','telefono'];
+    protected $fillable = ['mascota','fecha_de_nacimiento','genero','alergias','edad','propietario','telefono','correo'];
 
 
 

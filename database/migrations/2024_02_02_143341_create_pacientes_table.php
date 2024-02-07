@@ -14,10 +14,13 @@ return new class extends Migration
         Schema::create('pacientes', function (Blueprint $table) {
             $table->id();
             $table->string('mascota');
+            $table->integer('fecha_de_nacimiento');
+            $table->string('genero');
             $table->string('alergias');
             $table->integer('edad');
             $table->string('propietario');
             $table->integer('telefono');
+            $table->string('correo');
             $table->timestamps();
         });
     }

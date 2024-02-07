@@ -37,10 +37,13 @@
                                         <th>N°</th>
                                         
 										<th>Mascota</th>
+										<th>fecha_de_nacimiento </th>
+										<th>Genero</th>
 										<th>Alergias</th>
 										<th>Edad</th>
 										<th>Propietario</th>
 										<th>Telefono</th>
+										<th>Correo</th>
 
                                         <th></th>
                                     </tr>
@@ -51,10 +54,13 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $paciente->mascota }}</td>
+											<td>{{ $paciente->fecha_de_nacimiento }}</td>
+											<td>{{ $paciente->genero }}</td>
 											<td>{{ $paciente->alergias }}</td>
 											<td>{{ $paciente->edad }}</td>
 											<td>{{ $paciente->propietario }}</td>
 											<td>{{ $paciente->telefono }}</td>
+											<td>{{ $paciente->correo }}</td>
 
                                             <td>
                                                 <form action="{{ route('pacientes.destroy',$paciente->id) }}" method="POST">

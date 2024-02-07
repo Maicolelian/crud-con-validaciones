@@ -47,10 +47,13 @@ class PacienteController extends Controller
 
         $request->validate([
             'mascota' => 'required|string|max:20|alpha',
+            'fecha_de_nacimiento' => 'required|date',
+            'genero' => 'required|string',
             'alergias' => 'required|string|max:20|alpha',
             'edad' => 'required|integer|max:99',
             'propietario' => 'required|string|alpha',
             'telefono' => 'required|integer|max:99999999',
+            'correo' => 'required',
         ]);
 
         $paciente = Paciente::create($request->all());
@@ -98,10 +101,13 @@ class PacienteController extends Controller
 
         $request->validate([
             'mascota' => 'required|string|max:20|alpha',
+            'fecha_de_nacimiento' => 'required|date',
+            'genero' => 'required|string',
             'alergias' => 'required|string|max:20|alpha',
             'edad' => 'required|integer|max:99',
             'propietario' => 'required|string|alpha',
             'telefono' => 'required|integer|max:99999999',
+            'correo' => 'required',
         ]);
 
         $paciente->update($request->all());
